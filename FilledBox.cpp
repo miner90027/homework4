@@ -12,7 +12,7 @@ FilledBox::FilledBox(int w, int h) : Box(w,h){
 }
 
 std::string FilledBox::type() {
-	return _type;
+	return "Filled";
 }
 
 void FilledBox::print(std::ostream &os) const{

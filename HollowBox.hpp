@@ -5,21 +5,20 @@
  * 03/25/2021
  */
 
-#ifndef HOMEWORK4_FILLEDBOX_HPP
-#define HOMEWORK4_FILLEDBOX_HPP
+#ifndef HOMEWORK4_HOLLOWBOX_HPP
+#define HOMEWORK4_HOLLOWBOX_HPP
 #include "Box.hpp"
 #include <string>
 
-class FilledBox : public Box {
+class HollowBox: public Box {
 public:
 	using Box::Box;
-	FilledBox(int w, int h);
+
+	HollowBox(int w, int h);
 
 	std::string type() override;
 	void print(std::ostream &os) const override;
-private:
-
 };
 
 
-#endif //HOMEWORK4_FILLEDBOX_HPP
+#endif //HOMEWORK4_HOLLOWBOX_HPP
