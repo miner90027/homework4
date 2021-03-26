@@ -18,9 +18,11 @@ public:
 
 	void setHeight(int h);
 	void setWidth(int w);
-	int getHeight();
-	int getWidth();
+	int getHeight() const;
+	int getWidth() const;
 
+	virtual void print(std::ostream &os) const = 0;
+	virtual std::string type()= 0;
 private:
 	int _height;
 	int _width;

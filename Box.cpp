@@ -16,7 +16,7 @@ Box::Box(int w, int h): _height(h), _width(w) {
 }
 
 std::ostream & operator<<(std::ostream &os, const Box &b) {
-	os << "\n";
+	b.print(os);
 	return os;
 }
 
@@ -28,11 +28,11 @@ void Box::setWidth(int w) {
 	_width = w;
 }
 
-int Box::getHeight() {
+int Box::getHeight() const {
 	return _height;
 }
 
-int Box::getWidth() {
+int Box::getWidth() const {
 	return _width;
 }
 
