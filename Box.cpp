@@ -6,6 +6,10 @@
  */
 
 #include "Box.hpp"
+#include "FilledBox.hpp"
+#include "HollowBox.hpp"
+#include "CheckeredBox.hpp"
+
 
 Box::Box(): _height(1), _width(1) {
 
@@ -34,6 +38,19 @@ int Box::getHeight() const {
 
 int Box::getWidth() const {
 	return _width;
+}
+
+std::unique_ptr<Box> boxFactory(char c, int w, int h) {
+	switch(c){
+		case 'f':
+			return std::make_unique<FilledBox>(w,h);
+		case 'h':
+			return std::make_unique<HollowBox>(w,h);
+		case 'c':
+			return std::make_unique<CheckeredBox>(w,h);
+		default:
+			throw std::runtime_error("Bad char passed to boxFactory().\nAccepted char input: f, h, c.\n");
+	}
 }
 
 

@@ -15,7 +15,7 @@ public:
 	using Box::Box;
 	FilledBox(int w, int h);
 
-	std::string type() override;
+	std::string type() const override;
 	void print(std::ostream &os) const override;
 private:
 

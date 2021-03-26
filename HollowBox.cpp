@@ -12,7 +12,7 @@ HollowBox::HollowBox(int w, int h) : Box(w, h) {
 
 }
 
-std::string HollowBox::type() {
+std::string HollowBox::type() const{
 	return "Hollow";
 }
 

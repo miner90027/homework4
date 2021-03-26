@@ -11,7 +11,7 @@ FilledBox::FilledBox(int w, int h) : Box(w,h){
 
 }
 
-std::string FilledBox::type() {
+std::string FilledBox::type() const{
 	return "Filled";
 }
 

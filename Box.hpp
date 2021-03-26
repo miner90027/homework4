@@ -12,6 +12,7 @@
 
 class Box {
 	friend std::ostream & operator<< (std::ostream &os, const Box &b);
+	friend std::unique_ptr<Box> boxFactory(char c, int w, int h);
 public:
 	Box();
 	Box(int w, int h);
@@ -22,7 +23,9 @@ public:
 	int getWidth() const;
 
 	virtual void print(std::ostream &os) const = 0;
-	virtual std::string type()= 0;
+	virtual std::string type() const = 0;
+
+	virtual ~Box() = default;
 private:
 	int _height;
 	int _width;

@@ -11,7 +11,7 @@ CheckeredBox::CheckeredBox(int w, int h) : Box(w, h) {
 
 }
 
-std::string CheckeredBox::type() {
+std::string CheckeredBox::type() const{
 	return "Checkered";
 }
 
