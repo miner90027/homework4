@@ -1,11 +1,11 @@
 #include <iostream>
-#include "HollowBox.hpp"
+#include "CheckeredBox.hpp"
 using std::cout;
 using std::endl;
 
 int main() {
 
-	HollowBox box2(5,4);
+	CheckeredBox box2(4,4);
 	cout << box2 <<endl;
 	return 0;
 }
